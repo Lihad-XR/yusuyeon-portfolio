@@ -113,6 +113,106 @@ const portfolioDetails = {
           `
         },
 
+        
+        {
+            title: "System Architecture",
+
+            html: `
+                <div class="modal-system-flow">
+
+                <div class="modal-flow-item">
+                    <span class="modal-flow-number">01</span>
+
+                    <div>
+                    <strong>CNC / MCT 설비</strong>
+                    <p>
+                        공구 사용량, RPM, 부하율,
+                        생산량, 설비 상태 등의
+                        현장 데이터 발생
+                    </p>
+                    </div>
+                </div>
+
+
+                <div class="modal-flow-arrow">
+                    ↓
+                </div>
+
+
+                <div class="modal-flow-item">
+                    <span class="modal-flow-number">02</span>
+
+                    <div>
+                    <strong>MSSQL</strong>
+                    <p>
+                        약 5초 주기로 수집된
+                        설비 데이터를 조회하고
+                        학습·서비스용 데이터로 정리
+                    </p>
+                    </div>
+                </div>
+
+
+                <div class="modal-flow-arrow">
+                    ↓
+                </div>
+
+
+                <div class="modal-flow-item">
+                    <span class="modal-flow-number">03</span>
+
+                    <div>
+                    <strong>AI Prediction</strong>
+                    <p>
+                        PyTorch 기반 예측 모델을 이용해
+                        공구 교체 위험과
+                        관련 지표 계산
+                    </p>
+                    </div>
+                </div>
+
+
+                <div class="modal-flow-arrow">
+                    ↓
+                </div>
+
+
+                <div class="modal-flow-item">
+                    <span class="modal-flow-number">04</span>
+
+                    <div>
+                    <strong>Flask API / Dashboard</strong>
+                    <p>
+                        예측 결과와 설비 상태를
+                        웹 API와 대시보드를 통해
+                        운영자가 확인할 수 있도록 제공
+                    </p>
+                    </div>
+                </div>
+
+
+                <div class="modal-flow-arrow">
+                    ↓
+                </div>
+
+
+                <div class="modal-flow-item">
+                    <span class="modal-flow-number">05</span>
+
+                    <div>
+                    <strong>Three.js / Unreal Engine</strong>
+                    <p>
+                        설비 상태를 3D로 시각화하고
+                        공구 교체 과정을 VR 체험으로
+                        확장
+                    </p>
+                    </div>
+                </div>
+
+                </div>
+            `
+            },
+
 
         {
           title: "서비스",
