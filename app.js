@@ -28,6 +28,23 @@ const portfolioDetails = {
         "실제 제조 현장의 CNC/MCT 및 PLC 데이터를 분석해 공구 교체 위험을 예측하고, 웹 대시보드와 3D·VR 사용자 경험까지 연결한 통합 프로젝트입니다.",
 
 
+      links: [
+
+        {
+          label: "실시간 CNC 대시보드",
+          type: "LIVE DEMO",
+          url: "https://test-website-view-2.onrender.com/dashboard"
+        },
+
+        {
+          label: "요구사항명세서 / 발표자료",
+          type: "CANVA",
+          url: "https://www.canva.com/design/DAHMKhFF5CQ/ZzUkKlmH4GiFML5hqqRQNw/view"
+        }
+
+      ],
+
+
       media: [
 
         {
@@ -280,6 +297,23 @@ const portfolioDetails = {
         "NOAA ENSO 시계열 데이터를 바탕으로 엘니뇨·중립·라니냐 상태와 향후 발생 가능 시기를 예측하는 웹 분석 서비스를 개발했습니다.",
 
 
+      links: [
+
+        {
+          label: "ENSO 예측 웹 서비스",
+          type: "LIVE DEMO",
+          url: "https://enso-lstm-api.onrender.com/"
+        },
+
+        {
+          label: "Deep Learning Portfolio",
+          type: "PROJECT PAGE",
+          url: "https://lihad-xr.github.io/deeplearning-portfolio/"
+        }
+
+      ],
+
+
       media: [
 
         {
@@ -393,6 +427,17 @@ const portfolioDetails = {
 
       summary:
         "한국 전통 공포 요소와 VR 특유의 공간 몰입감을 결합한 공포·미스터리 게임으로, 4인 팀 팀장을 맡아 주요 시스템과 VR 인터랙션을 구현했습니다.",
+
+
+      links: [
+
+        {
+          label: "메타버스 개발자 경진대회 출품작",
+          type: "OFFICIAL PAGE",
+          url: "https://www.metaversedev.kr/gallery_2025/%EB%B3%84%EC%8B%A0%EA%B5%BF-%EB%B3%84%EC%8B%A0%EA%B5%BF"
+        }
+
+      ],
 
 
       media: [
@@ -615,33 +660,46 @@ const portfolioDetails = {
 
 
     /* -------------------------------------------------------
-       RAG CAG
+       VIRTUAL STUDIO
     ------------------------------------------------------- */
 
-    "rag-cag": {
+    "virtual-studio": {
 
       meta:
-        "05 · LLM / RESEARCH · 2025.11",
+        "05 · VIRTUAL PRODUCTION · 2025",
 
       title:
-        "RAG · CAG 구조 및 성능 비교 연구",
+        "버추얼 스튜디오 캐릭터 PV 「연(緣)」",
 
       summary:
-        "LLM의 환각, 최신성 부족, 출처 불명확성 문제를 보완하기 위해 RAG와 CAG를 구현하고 동일 조건에서 성능을 비교했습니다.",
+        "Unreal Engine 기반 버추얼 스튜디오 환경에서 조선시대와 현대를 넘나드는 판타지 캐릭터 PV를 제작했습니다. 팀장으로 맵 개발·디자인, VFX 제작, 카메라 연출과 전체 영상 감독을 담당했습니다.",
 
 
       media: [
 
         {
           type: "image",
-          src: "assets/images/system-pipeline.png",
-          label: "실험 구조"
+          src: "assets/images/project-연-hero.png",
+          label: "대표 장면"
         },
 
         {
           type: "image",
-          src: "assets/images/project-dashboard.png",
-          label: "결과"
+          src: "assets/images/project-연-filmingSet.jpg",
+          label: "버추얼 스튜디오 환경"
+        },
+
+        {
+          type: "image",
+          src: "assets/images/project-연-scene.png",
+          label: "VFX · 마법진 연출"
+        },
+
+        {
+          type: "video",
+          src: "assets/videos/projects/2조_2wice_연.mp4",
+          poster: "assets/images/project-연-hero.png",
+          label: "PV 영상"
         }
 
       ],
@@ -650,65 +708,78 @@ const portfolioDetails = {
       sections: [
 
         {
-          title: "연구 목적",
+          title: "프로젝트 개요",
           html: `
             <p>
-              RAG와 CAG가 LLM의 외부 지식 활용 과정에서
-              각각 어떤 장점과 한계를 가지는지
-              동일한 환경에서 비교하고자 했습니다.
+              약 3분 분량의 판타지·액션·로맨스 캐릭터 PV로,
+              시공간을 이동하는 불로불사 마법사의 서사와 능력을
+              버추얼 스튜디오 환경에서 시각화했습니다.
             </p>
           `
         },
 
 
         {
-          title: "구현",
+          title: "담당 역할",
           html: `
             <ul>
-              <li>논문 텍스트 문단 단위 분할</li>
-              <li>텍스트 임베딩</li>
-              <li>RAG 유사도 검색 구조 구현</li>
-              <li>CAG 검색 결과 캐싱 및 재사용</li>
+              <li>5인 팀 팀장 및 프로젝트 진행 총괄</li>
+              <li>Unreal Engine 맵 개발 및 디자인</li>
+              <li>Niagara 기반 이펙트 효과 제작</li>
+              <li>시퀀스 제작 및 카메라 배치</li>
+              <li>전체 영상 감독 및 연출</li>
             </ul>
           `
         },
 
 
         {
-          title: "평가",
+          title: "환경 구성",
           html: `
             <ul>
-              <li>정확도</li>
-              <li>응답시간</li>
-              <li>맥락 유지력</li>
-              <li>최신성</li>
-              <li>수치 정밀도</li>
+              <li>조선시대 공간과 현대 도시 공간 구성</li>
+              <li>불타는 한옥 등 장면별 CG 배경 제작</li>
+              <li>과거와 현대를 오가는 시공간 전환 연출</li>
+              <li>배우 촬영을 고려한 버추얼 스튜디오용 공간 설계</li>
             </ul>
           `
         },
 
 
         {
-          title: "결과",
+          title: "VFX / 연출",
           html: `
             <ul>
-              <li>RAG 정확도 0.92</li>
-              <li>RAG 최신성 0.91</li>
-              <li>CAG 응답시간 약 900ms</li>
-              <li>RAG + CAG 하이브리드 방향 제안</li>
+              <li>한국 전통 문양을 활용한 마법진 디자인 및 연출</li>
+              <li>불 · 시간 이동 · 공간 이동을 표현하는 시각 효과 구성</li>
+              <li>조명과 발광 효과를 활용한 마법진 강조</li>
+              <li>슬로모션 · 줌 · 회전 카메라를 활용한 시네마틱 연출</li>
             </ul>
           `
         },
 
 
         {
-          title: "피드백",
+          title: "제작 방식",
           html: `
             <p>
-              평가 과정에서 데이터 규모와 실험 기간이 더 확보되어야
-              결과의 신뢰성을 높일 수 있다는 피드백을 받았습니다.
-              이후 성능 수치뿐 아니라
-              실험 규모와 재현성까지 함께 고려하고 있습니다.
+              Unreal Engine에서 버추얼 스튜디오용 3D 환경과
+              시각 효과를 제작하고 장면과 카메라를 구성했습니다.
+              실제 촬영 단계에서는 별도의 촬영 프로그램을 활용해
+              배우와 가상 환경을 결합하여 영상을 제작했습니다.
+            </p>
+          `
+        },
+
+
+        {
+          title: "배운 점",
+          html: `
+            <p>
+              실시간 3D 환경을 제작하는 것에서 끝나지 않고,
+              실제 촬영에서 카메라에 어떻게 보이는지와 배우의 동선,
+              VFX의 위치와 타이밍까지 함께 고려해야 한다는 점을 경험했습니다.
+              환경 제작과 영상 연출을 하나의 제작 흐름으로 설계하는 과정을 익혔습니다.
             </p>
           `
         }
@@ -717,12 +788,13 @@ const portfolioDetails = {
 
 
       tags: [
-        "RAG",
-        "CAG",
-        "LLM",
-        "Embedding",
-        "Experiment",
-        "Research"
+        "Unreal Engine",
+        "Virtual Production",
+        "Niagara",
+        "VFX",
+        "Cinematic",
+        "3D Environment",
+        "Directing"
       ]
 
     },
@@ -748,9 +820,10 @@ const portfolioDetails = {
       media: [
 
         {
-          type: "image",
-          src: "assets/images/system-smart-factory.png",
-          label: "게임 화면"
+          type: "video",
+          src: "assets/videos/projects/Unity ML-Agents.mp4",
+          poster: "assets/images/project-mlagent-hero.png",
+          label: "PV 영상"
         }
 
       ],
@@ -826,6 +899,17 @@ const portfolioDetails = {
 
       summary:
         "PyQt5와 Pillow 기반 이미지 처리 프로그램을 분석하고, 다양한 영상처리 알고리즘과 편집 기능, Super Resolution 기능을 추가했습니다.",
+
+
+      links: [
+
+        {
+          label: "Digital Image Processing 자료",
+          type: "CANVA",
+          url: "https://canva.link/digital-image-processing"
+        }
+
+      ],
 
 
       media: [
@@ -921,6 +1005,17 @@ const portfolioDetails = {
 
       summary:
         "실제 수출통관 업무를 분석해 반복되는 거래 정보를 효율적으로 저장하고 검색할 수 있는 관계형 데이터베이스를 설계했습니다.",
+
+
+      links: [
+
+        {
+          label: "관세사무소 수출통관 DB 자료",
+          type: "CANVA",
+          url: "https://canva.link/custons-brokerage"
+        }
+
+      ],
 
 
       media: [
@@ -1246,6 +1341,17 @@ const portfolioDetails = {
         "도시 쓰레기 문제를 시민 참여형 게임으로 해결하고, 사용자의 활동 데이터를 도시 운영과 행정에 다시 활용하도록 설계한 서비스입니다.",
 
 
+      links: [
+
+        {
+          label: "별빛 수거단 기획 · 발표자료",
+          type: "CANVA",
+          url: "https://canva.link/star-cleaners"
+        }
+
+      ],
+
+
       media: [
 
         {
@@ -1358,17 +1464,28 @@ const portfolioDetails = {
         "RAG와 CAG의 구조를 직접 구현하고 정확도, 최신성, 응답시간 등 여러 성능 지표를 비교한 연구입니다.",
 
 
+      links: [
+
+        {
+          label: "RAG · CAG 연구 발표자료",
+          type: "CANVA",
+          url: "https://canva.link/rag-cag"
+        }
+
+      ],
+
+
       media: [
 
         {
           type: "image",
-          src: "assets/images/system-pipeline.png",
+          src: "assets/images/project-ragtag-graph2.png",
           label: "연구 구조"
         },
 
         {
           type: "image",
-          src: "assets/images/project-dashboard.png",
+          src: "assets/images/project-ragtag-application.png",
           label: "연구 결과"
         }
 
@@ -1455,6 +1572,17 @@ const portfolioDetails = {
 
       summary:
         "웹툰 「Prayers」의 애니메이션화를 가정해, 각 화 엔딩에 삽입될 생성형 AI 기반 뮤직비디오를 제작했습니다.",
+
+
+      links: [
+
+        {
+          label: "Prayers 작품 자료",
+          type: "CANVA",
+          url: "https://canva.link/faithless"
+        }
+
+      ],
 
 
       media: [
@@ -1980,6 +2108,10 @@ document.addEventListener(
 
       modalMedia.innerHTML = "";
 
+      modalMedia.classList.remove(
+        "links-mode"
+      );
+
 
       /*
        * IMAGE
@@ -2102,6 +2234,213 @@ document.addEventListener(
 
       }
 
+
+      /*
+       * LINKS / RESOURCES
+       * 갤러리의 마지막 페이지
+       */
+
+      else if(
+        mediaItem.type ===
+        "links"
+      ){
+
+        modalMedia.classList.add(
+          "links-mode"
+        );
+
+
+        const page =
+          document.createElement(
+            "div"
+          );
+
+
+        page.className =
+          "modal-links-page";
+
+
+        const heading =
+          document.createElement(
+            "div"
+          );
+
+
+        heading.className =
+          "modal-links-heading";
+
+
+        heading.innerHTML = `
+
+          <span class="modal-links-heading-icon">
+            ↗
+          </span>
+
+          <div class="modal-links-heading-copy">
+
+            <span>
+              LINKS / RESOURCES
+            </span>
+
+            <h3>
+              프로젝트 관련 링크
+            </h3>
+
+            <p>
+              실제 서비스, 공식 페이지, 문서 및 발표 자료를 확인할 수 있습니다.
+            </p>
+
+          </div>
+
+        `;
+
+
+        const list =
+          document.createElement(
+            "div"
+          );
+
+
+        list.className =
+          "modal-links-list";
+
+
+        (
+          mediaItem.links ||
+          []
+        ).forEach(
+          link => {
+
+            const anchor =
+              document.createElement(
+                "a"
+              );
+
+
+            anchor.className =
+              "modal-links-card";
+
+
+            anchor.href =
+              link.url;
+
+
+            anchor.target =
+              "_blank";
+
+
+            anchor.rel =
+              "noopener noreferrer";
+
+
+            const icon =
+              document.createElement(
+                "span"
+              );
+
+
+            icon.className =
+              "modal-links-card-icon";
+
+
+            icon.textContent =
+              "↗";
+
+
+            const copy =
+              document.createElement(
+                "span"
+              );
+
+
+            copy.className =
+              "modal-links-card-copy";
+
+
+            const label =
+              document.createElement(
+                "strong"
+              );
+
+
+            label.textContent =
+              link.label;
+
+
+            const type =
+              document.createElement(
+                "span"
+              );
+
+
+            type.textContent =
+              link.type ||
+              "EXTERNAL LINK";
+
+
+            const arrow =
+              document.createElement(
+                "span"
+              );
+
+
+            arrow.className =
+              "modal-links-card-arrow";
+
+
+            arrow.textContent =
+              "↗";
+
+
+            copy.appendChild(
+              label
+            );
+
+
+            copy.appendChild(
+              type
+            );
+
+
+            anchor.appendChild(
+              icon
+            );
+
+
+            anchor.appendChild(
+              copy
+            );
+
+
+            anchor.appendChild(
+              arrow
+            );
+
+
+            list.appendChild(
+              anchor
+            );
+
+          }
+        );
+
+
+        page.appendChild(
+          heading
+        );
+
+
+        page.appendChild(
+          list
+        );
+
+
+        modalMedia.appendChild(
+          page
+        );
+
+      }
+
     }
 
 
@@ -2111,21 +2450,53 @@ document.addEventListener(
     ======================================================= */
 
     function renderMediaGallery(
-      mediaItems
+      mediaItems,
+      links = []
     ){
 
       modalThumbnailList.innerHTML =
         "";
 
 
+      const galleryItems = [
+        ...(
+          mediaItems ||
+          []
+        )
+      ];
+
+
+      /*
+       * 관련 링크가 있는 경우
+       * 갤러리의 마지막 페이지로 LINKS를 추가
+       */
+
       if(
-        !mediaItems ||
-        mediaItems.length === 0
+        links &&
+        links.length > 0
+      ){
+
+        galleryItems.push(
+          {
+            type:"links",
+            label:"관련 링크",
+            links:links
+          }
+        );
+
+      }
+
+
+      if(
+        galleryItems.length === 0
       ){
 
         showMediaPlaceholder(
           "등록된 이미지가 없습니다."
         );
+
+        modalThumbnailList.style.display =
+          "none";
 
         return;
 
@@ -2133,17 +2504,17 @@ document.addEventListener(
 
 
       renderMainMedia(
-        mediaItems[0]
+        galleryItems[0]
       );
 
 
       /*
-       * 미디어가 하나뿐이면
-       * 썸네일 영역 숨김
+       * 이미지/영상/링크 페이지를 합쳐서
+       * 한 개뿐일 때만 썸네일 영역 숨김
        */
 
       if(
-        mediaItems.length === 1
+        galleryItems.length === 1
       ){
 
         modalThumbnailList.style.display =
@@ -2158,7 +2529,7 @@ document.addEventListener(
       }
 
 
-      mediaItems.forEach(
+      galleryItems.forEach(
         (
           item,
           index
@@ -2283,6 +2654,60 @@ document.addEventListener(
           }
 
 
+          /*
+           * LINKS THUMB
+           */
+
+          else if(
+            item.type ===
+            "links"
+          ){
+
+            button.classList.add(
+              "modal-thumbnail-links"
+            );
+
+
+            const icon =
+              document.createElement(
+                "span"
+              );
+
+
+            icon.className =
+              "modal-thumbnail-links-icon";
+
+
+            icon.textContent =
+              "↗";
+
+
+            const label =
+              document.createElement(
+                "span"
+              );
+
+
+            label.className =
+              "modal-thumbnail-links-label";
+
+
+            label.textContent =
+              "LINKS";
+
+
+            button.appendChild(
+              icon
+            );
+
+
+            button.appendChild(
+              label
+            );
+
+          }
+
+
           button.addEventListener(
             "click",
             () => {
@@ -2386,6 +2811,8 @@ document.addEventListener(
 
       renderMediaGallery(
         data.media ||
+        [],
+        data.links ||
         []
       );
 

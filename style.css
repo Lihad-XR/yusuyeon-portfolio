@@ -1726,6 +1726,306 @@ img{
 
 
 /* =========================================================
+   MODAL GALLERY LINKS PAGE
+========================================================= */
+
+.modal-main-media.links-mode{
+  align-items:stretch;
+  justify-content:stretch;
+
+  overflow-y:auto;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f7fbfb 0%,
+      #eef5f6 100%
+    );
+}
+
+
+.modal-links-page{
+  width:100%;
+  min-height:100%;
+
+  display:flex;
+  flex-direction:column;
+
+  padding:34px;
+
+  color:var(--text);
+}
+
+
+.modal-links-heading{
+  display:flex;
+  align-items:flex-start;
+
+  gap:16px;
+
+  margin-bottom:24px;
+}
+
+
+.modal-links-heading-icon{
+  flex:0 0 auto;
+
+  width:48px;
+  height:48px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:14px;
+
+  color:var(--primary);
+  background:var(--primary-soft);
+
+  font-size:22px;
+  font-weight:900;
+}
+
+
+.modal-links-heading-copy{
+  min-width:0;
+}
+
+
+.modal-links-heading-copy span{
+  display:block;
+
+  margin-bottom:4px;
+
+  color:var(--primary);
+
+  font-size:11px;
+  font-weight:900;
+
+  letter-spacing:.14em;
+}
+
+
+.modal-links-heading-copy h3{
+  margin:0 0 5px;
+
+  color:var(--navy);
+
+  font-size:24px;
+  line-height:1.3;
+}
+
+
+.modal-links-heading-copy p{
+  margin:0;
+
+  color:var(--muted);
+
+  font-size:14px;
+  line-height:1.65;
+}
+
+
+.modal-links-list{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:12px;
+}
+
+
+.modal-links-card{
+  min-width:0;
+
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  padding:18px;
+
+  border:
+    1px solid #d8e4e7;
+
+  border-radius:14px;
+
+  background:
+    rgba(255,255,255,.88);
+
+  box-shadow:
+    0 8px 22px rgba(15,35,61,.05);
+
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.modal-links-card:hover{
+  background:#ffffff;
+
+  border-color:
+    rgba(13,116,111,.42);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(15,35,61,.09);
+}
+
+
+.modal-links-card-icon{
+  flex:0 0 auto;
+
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:11px;
+
+  color:var(--primary);
+  background:var(--primary-soft);
+
+  font-size:19px;
+  font-weight:900;
+}
+
+
+.modal-links-card-copy{
+  min-width:0;
+
+  display:flex;
+  flex:1;
+  flex-direction:column;
+
+  gap:2px;
+}
+
+
+.modal-links-card-copy strong{
+  overflow:hidden;
+
+  color:var(--navy);
+
+  font-size:14px;
+  font-weight:900;
+  line-height:1.4;
+
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+
+.modal-links-card-copy span{
+  color:var(--muted);
+
+  font-size:10px;
+  font-weight:900;
+
+  letter-spacing:.1em;
+}
+
+
+.modal-links-card-arrow{
+  flex:0 0 auto;
+
+  margin-left:auto;
+
+  color:#8493a4;
+
+  font-size:16px;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+.modal-links-card:hover
+.modal-links-card-arrow{
+  color:var(--primary);
+
+  transform:
+    translate(2px,-2px);
+}
+
+
+/* 마지막 갤러리 썸네일 : LINKS */
+
+.modal-thumbnail-links{
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:3px;
+
+  color:var(--primary-dark);
+
+  background:
+    linear-gradient(
+      145deg,
+      #edf8f6,
+      #e1f1ef
+    );
+}
+
+
+.modal-thumbnail-links-icon{
+  font-size:19px;
+  font-weight:900;
+  line-height:1;
+}
+
+
+.modal-thumbnail-links-label{
+  font-size:9px;
+  font-weight:900;
+
+  letter-spacing:.1em;
+}
+
+
+.modal-thumbnail-links.active{
+  background:
+    var(--primary-soft);
+}
+
+
+@media(max-width:640px){
+
+  .modal-links-page{
+    padding:22px;
+  }
+
+
+  .modal-links-list{
+    grid-template-columns:1fr;
+  }
+
+
+  .modal-links-heading-copy h3{
+    font-size:20px;
+  }
+
+
+  .modal-links-card{
+    padding:14px;
+  }
+
+}
+
+
+/* =========================================================
    CNC SYSTEM ARCHITECTURE
 ========================================================= */
 
