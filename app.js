@@ -32,26 +32,20 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/project-cnc-machine.png",
-          label: "CNC 설비"
-        },
-
-        {
-          type: "image",
-          src: "assets/images/project-dashboard.png",
+          src: "assets/images/project-cnc-screen1.png",
           label: "웹 대시보드"
         },
 
         {
           type: "image",
-          src: "assets/images/project-3d-view.png",
+          src: "assets/images/project-cnc-screen2.png",
           label: "3D 시각화"
         },
 
         {
           type: "video",
           src: "assets/videos/projects/cnc-demo.mp4",
-          poster: "assets/images/project-cnc-machine.png",
+          poster: "assets/images/project-cnc-screen1.png",
           label: "시연 영상"
         }
 
@@ -290,13 +284,13 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/system-pipeline.png",
-          label: "예측 구조"
+          src: "assets/images/project-lstm-portfolio.png",
+          label: "제작 과정"
         },
 
         {
           type: "image",
-          src: "assets/images/project-dashboard.png",
+          src: "assets/images/project-lstm-web.png",
           label: "분석 화면"
         }
 
@@ -405,14 +399,14 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/project-vr-training.png",
+          src: "assets/images/project-byeolsingut-screen.png",
           label: "VR 화면"
         },
 
         {
           type: "video",
-          src: "assets/videos/projects/byeolsingut-demo.mp4",
-          poster: "assets/images/project-vr-training.png",
+          src: "assets/videos/projects/ByeolsingutTrailer.mp4",
+          poster: "assets/images/project-byeolsingut-hero.png",
           label: "플레이 영상"
         }
 
@@ -522,8 +516,15 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/project-3d-view.png",
+          src: "assets/images/project-MR-product.png",
           label: "MR 화면"
+        },
+
+        {
+          type: "video",
+          src: "assets/videos/projects/MR Auction.mp4",
+          poster: "assets/images/project-byeolsingut-hero.png",
+          label: "플레이 영상"
         }
 
       ],
