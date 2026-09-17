@@ -113,7 +113,7 @@ const portfolioDetails = {
           `
         },
 
-        
+
         {
             title: "System Architecture",
 
@@ -1920,6 +1920,12 @@ document.addEventListener(
         "modal-tag-list"
       );
 
+    
+    const modalContentColumn =
+    modal.querySelector(
+        ".modal-content-column"
+    );
+
 
     let lastFocusedElement =
       null;
@@ -2475,6 +2481,8 @@ document.addEventListener(
 
       modalPanel.scrollTop =
         0;
+
+      modalContentColumn.scrollTop = 0;
 
 
       const closeButton =
