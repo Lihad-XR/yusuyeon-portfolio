@@ -1081,6 +1081,21 @@ img{
   color:#ffffff;
 }
 
+.contact-info a{
+  color:rgba(255,255,255,.86);
+  text-decoration:none;
+
+  transition:
+    color .2s ease,
+    opacity .2s ease;
+}
+
+.contact-info a:hover{
+  color:#ffffff;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+
 
 /* =========================================================
    FOOTER
