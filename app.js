@@ -907,7 +907,13 @@ const portfolioDetails = {
           label: "Digital Image Processing 자료",
           type: "CANVA",
           url: "https://canva.link/digital-image-processing"
+        },
+        {
+          label: "Digital Image Processing 웹",
+          type: "WEB",
+          url: "https://digital-image-processing-g59a.onrender.com/"
         }
+
 
       ],
 
@@ -916,7 +922,7 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/project-dashboard.png",
+          src: "assets/images/project-digitalImageProcessing-hero.png",
           label: "프로그램 UI"
         }
 
@@ -1022,8 +1028,14 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/system-pipeline.png",
+          src: "assets/images/project-SQL.png",
           label: "DB 구조"
+        },
+
+        {
+          type: "image",
+          src: "assets/images/project-SQL-flow.png",
+          label: "flow"
         }
 
       ],
@@ -1120,16 +1132,9 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/system-smart-factory.png",
+          src: "assets/images/project-RaspberryPi.jpg",
           label: "자율주행 차량"
         },
-
-        {
-          type: "video",
-          src: "assets/videos/projects/raspberry-drive.mp4",
-          poster: "assets/images/system-smart-factory.png",
-          label: "주행 영상"
-        }
 
       ],
 
@@ -1245,15 +1250,9 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/system-smart-factory.png",
+          src: "assets/images/awards-Excavate After².jpg",
           label: "대표 렌더"
         },
-
-        {
-          type: "image",
-          src: "assets/images/project-3d-view.png",
-          label: "상세 렌더"
-        }
 
       ],
 
@@ -1356,14 +1355,27 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/project-dashboard.png",
+          src: "assets/images/awards-StarCleaners.png",
           label: "기획 이미지"
         },
 
         {
           type: "image",
-          src: "assets/images/system-pipeline.png",
+          src: "assets/images/awards-StarCleaners-uiux.png",
           label: "서비스 구조"
+        },
+
+        {
+          type: "image",
+          src: "assets/images/awards-StarCleaners-AI.png",
+          label: "AI 구조"
+        },
+
+        {
+          type: "video",
+          src: "assets/videos/awards/별빛 수거단.mp4",
+          poster: "assets/images/awards-StarCleaners-video.png",
+          label: "광고"
         }
 
       ],
@@ -1589,15 +1601,14 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/hero-studio.png",
+          src: "assets/images/awards-Faithless-text.png",
           label: "MV 이미지"
         },
 
         {
-          type: "video",
-          src: "assets/videos/awards/prayers-mv.mp4",
-          poster: "assets/images/hero-studio.png",
-          label: "전체 MV"
+          type: "youtube",
+          url: "https://www.youtube.com/watch?v=BUpTLctTZCI",
+          label: "Prayers 전체 MV"
         }
 
       ],
@@ -1703,8 +1714,27 @@ const portfolioDetails = {
 
         {
           type: "image",
-          src: "assets/images/project-3d-view.png",
+          src: "assets/images/awards-dotGame-hero.png",
           label: "게임 화면"
+        },
+
+        {
+          type: "image",
+          src: "assets/images/awards-dotGame-stage1.png",
+          label: "게임 화면"
+        },
+
+        {
+          type: "image",
+          src: "assets/images/awards-dotGame-stage2.png",
+          label: "게임 화면"
+        },
+
+        {
+          type: "video",
+          src: "assets/videos/awards/꿈을 꾸는 나무_happy.mp4",
+          poster: "assets/images/awards-dotGame-start.png",
+          label: "게임 플레이 영상"
         }
 
       ],
@@ -2099,6 +2129,115 @@ document.addEventListener(
 
 
     /* =======================================================
+       YOUTUBE HELPERS
+    ======================================================= */
+
+    function getYouTubeVideoId(
+      url
+    ){
+
+      try{
+
+        const parsedUrl =
+          new URL(url);
+
+
+        if(
+          parsedUrl.hostname ===
+          "youtu.be"
+          ||
+          parsedUrl.hostname ===
+          "www.youtu.be"
+        ){
+
+          return parsedUrl.pathname
+            .replace(/^\//, "")
+            .split("/")[0] ||
+            null;
+
+        }
+
+
+        if(
+          parsedUrl.hostname.includes(
+            "youtube.com"
+          )
+        ){
+
+          if(
+            parsedUrl.pathname ===
+            "/watch"
+          ){
+
+            return parsedUrl.searchParams.get(
+              "v"
+            );
+
+          }
+
+
+          if(
+            parsedUrl.pathname.startsWith(
+              "/shorts/"
+            )
+          ){
+
+            return parsedUrl.pathname
+              .split("/")[2] ||
+              null;
+
+          }
+
+
+          if(
+            parsedUrl.pathname.startsWith(
+              "/embed/"
+            )
+          ){
+
+            return parsedUrl.pathname
+              .split("/")[2] ||
+              null;
+
+          }
+
+        }
+
+      }
+      catch(error){
+
+        return null;
+
+      }
+
+
+      return null;
+
+    }
+
+
+    function getYouTubeEmbedUrl(
+      url
+    ){
+
+      const videoId =
+        getYouTubeVideoId(url);
+
+
+      if(!videoId){
+
+        return null;
+
+      }
+
+
+      return `https://www.youtube.com/embed/${videoId}`;
+
+    }
+
+
+
+    /* =======================================================
        MAIN MEDIA
     ======================================================= */
 
@@ -2230,6 +2369,94 @@ document.addEventListener(
 
         modalMedia.appendChild(
           video
+        );
+
+      }
+
+
+      /*
+       * YOUTUBE
+       */
+
+      else if(
+        mediaItem.type ===
+        "youtube"
+      ){
+
+        const embedUrl =
+          getYouTubeEmbedUrl(
+            mediaItem.url
+          );
+
+
+        if(!embedUrl){
+
+          showMediaPlaceholder(
+            "YouTube 주소를 확인해주세요.",
+            mediaItem.url || ""
+          );
+
+          return;
+
+        }
+
+
+        const iframe =
+          document.createElement(
+            "iframe"
+          );
+
+
+        iframe.src =
+          embedUrl;
+
+
+        iframe.title =
+          mediaItem.label ||
+          "YouTube 영상";
+
+
+        iframe.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+
+
+        iframe.allowFullscreen =
+          true;
+
+
+        iframe.setAttribute(
+          "loading",
+          "lazy"
+        );
+
+
+        /*
+         * CSS 파일을 수정하지 않아도
+         * 기존 미디어 영역을 꽉 채우도록 설정
+         */
+
+        iframe.style.width =
+          "100%";
+
+
+        iframe.style.height =
+          "100%";
+
+
+        iframe.style.display =
+          "block";
+
+
+        iframe.style.border =
+          "0";
+
+
+        iframe.style.background =
+          "#0c1f33";
+
+
+        modalMedia.appendChild(
+          iframe
         );
 
       }
@@ -2655,6 +2882,66 @@ document.addEventListener(
 
 
           /*
+           * YOUTUBE THUMB
+           */
+
+          else if(
+            item.type ===
+            "youtube"
+          ){
+
+            const videoId =
+              getYouTubeVideoId(
+                item.url
+              );
+
+
+            if(videoId){
+
+              const image =
+                document.createElement(
+                  "img"
+                );
+
+
+              image.src =
+                `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
+
+              image.alt =
+                item.label ||
+                "YouTube 영상";
+
+
+              button.appendChild(
+                image
+              );
+
+            }
+
+
+            const label =
+              document.createElement(
+                "span"
+              );
+
+
+            label.className =
+              "modal-thumbnail-video-label";
+
+
+            label.textContent =
+              "YOUTUBE";
+
+
+            button.appendChild(
+              label
+            );
+
+          }
+
+
+          /*
            * LINKS THUMB
            */
 
@@ -2956,6 +3243,24 @@ document.addEventListener(
           video => {
 
             video.pause();
+
+          }
+        );
+
+
+      /*
+       * YouTube 영상 정지
+       */
+
+      modal
+        .querySelectorAll(
+          "iframe"
+        )
+        .forEach(
+          iframe => {
+
+            iframe.src =
+              "";
 
           }
         );
